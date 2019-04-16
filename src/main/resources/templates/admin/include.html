@@ -3,7 +3,7 @@
 
 <div th:fragment="header">
     <meta charset="utf-8">
-    <title>javashop</title>
+    <title>JavaShop</title>
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,9 @@
     <link href="/style/demo.css" rel="stylesheet">
     <link href="/style/typicons.css" rel="stylesheet">
     <link href="/style/animate.css" rel="stylesheet">
+    <!--阿里字体-->
+    <link href="/iconfont/iconfont.css" rel="stylesheet">
+    <link href="/style/style.css" rel="stylesheet">
 </div>
 
 
@@ -67,20 +70,50 @@
 
         <ul class="nav sidebar-menu">
             <!--Dashboard-->
-            <li><a href="/admin/" target="_blank"><i class="menu-icon fa fa-film"></i><span class="menu-text">首页</span><i class="menu-expand"></i></a></li>
-            <li><a href="/admin/main/index.html"><i class="menu-icon fa fa-gear"></i><span class="menu-text">控制面板</span><i class="menu-expand"></i></a></li>
+            <li><a href="/admin/"><i class="iconfont icon-shichang"></i><span class="menu-text">首页</span></a></li>
             <li>
-                <a href="#" class="menu-dropdown"><i class="menu-icon fa fa-gear"></i><span class="menu-text">文档</span><i class="menu-expand"></i></a>
+                <a href="#" class="menu-dropdown"><i class="iconfont icon-gouwu"></i><span class="menu-text">商品管理</span><i class="menu-expand"></i></a>
                 <ul class="submenu">
-                    <li><a href="/admin/document/index.html"><span class="menu-text">文章列表</span><i class="menu-expand"></i></a></li>
+                    <li><a href="/admin/list"><span class="menu-text">商品列表</span></a></li>
+                    <li><a href="/admin/brand/lst"><span class="menu-text">商品品牌</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">商品分类</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">商品类型</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">商品回收站</span></a></li>
                 </ul>
             </li>
             <li>
-                <a href="#" class="menu-dropdown"><i class="menu-icon fa fa-gear"></i><span class="menu-text">系统</span><i class="menu-expand"></i></a>
+                <a href="#" class="menu-dropdown"><i class="iconfont icon-feiyong"></i><span class="menu-text">促销管理</span><i class="menu-expand"></i></a>
                 <ul class="submenu">
-                    <li><a href="/admin/user/index.html"><span class="menu-text">用户管理</span><i class="menu-expand"></i></a></li>
-                    <li><a href="/admin/auth_group/index.html"><span class="menu-text">角色管理</span><i class="menu-expand"></i></a></li>
-                    <li><a href="/admin/auth_rule/index.html"><span class="menu-text">权限列表</span><i class="menu-expand"></i></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">团购活动</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">积分商城</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">优惠券</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="menu-dropdown"><i class="iconfont icon-renyuan"></i><span class="menu-text">会员管理</span><i class="menu-expand"></i></a>
+                <ul class="submenu">
+                    <li><a href="/admin/document/index.html"><span class="menu-text">会员列表</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">会员等级</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">会员留言</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="menu-dropdown"><i class="iconfont icon-renyuan"></i><span class="menu-text">短信管理</span><i class="menu-expand"></i></a>
+                <ul class="submenu">
+                    <li><a href="/admin/document/index.html"><span class="menu-text">发送短信</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">短信签名</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="menu-dropdown"><i class="iconfont icon-xunzhang"></i><span class="menu-text">权限管理</span><i class="menu-expand"></i></a>
+            </li>
+            <li>
+                <a href="#" class="menu-dropdown"><i class="iconfont icon-shezhi"></i><span class="menu-text">系统设置</span><i class="menu-expand"></i></a>
+                <ul class="submenu">
+                    <li><a href="/admin/document/index.html"><span class="menu-text">商店设置</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">注册设置</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">支付设置</span></a></li>
+                    <li><a href="/admin/document/index.html"><span class="menu-text">数据备份</span></a></li>
                 </ul>
             </li>
         </ul>

@@ -22,4 +22,9 @@ spring:
   thymeleaf:
     cache: false
   resources:
-    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,file:${web.upload-path}
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,file:${web.Upload-path},file:${image.location.path}
+
+
+image:
+  location:
+    path: d:/upload/
