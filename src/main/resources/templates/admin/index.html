@@ -1,109 +1,39 @@
 <!DOCTYPE html>
-<html><head>
-	    <meta charset="utf-8">
-    <title>javashop</title>
-    <meta name="description" content="Dashboard">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!--Basic Styles-->
-    <link href="/style/bootstrap.css" rel="stylesheet">
-    <link href="/style/font-awesome.css" rel="stylesheet">
-    <link href="/style/weather-icons.css" rel="stylesheet">
-
-    <!--Beyond styles-->
-    <link id="beyond-link" href="/style/beyond.css" rel="stylesheet" type="text/css">
-    <link href="/style/demo.css" rel="stylesheet">
-    <link href="/style/typicons.css" rel="stylesheet">
-    <link href="/style/animate.css" rel="stylesheet">
-    
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <head th:include="@{admin/include}::header" ></head>
 </head>
 <body>
 
-	<div class="navbar">
-    <div class="navbar-inner">
-        <div class="navbar-container">
-            <div class="navbar-header pull-left">
-                <a href="#" class="navbar-brand"><small><img src="/images/logo.jpg" alt=""></small></a>
-            </div>
-            <div class="sidebar-collapse" id="sidebar-collapse">
-                <i class="collapse-icon fa fa-bars"></i>
-            </div>
-            <div class="navbar-header pull-right">
-                <div class="navbar-account">
-                    <ul class="account-area">
-                        <li>
-                            <a class="login-area dropdown-toggle" data-toggle="dropdown">
-                                <div class="avatar" title="View your public profile"><img src="/images/adam-jansen.jpg"></div>
-                                <section><h2><span class="profile"><span>admin</span></span></h2></section>
-                            </a>
+<div class="navbar">
+    <head th:include="@{admin/include}::top" ></head>
+</div>
 
-                            <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
-                                <li class="username"><a>David Stevenson</a></li>
-                                <li class="dropdown-footer"><a href="/admin/user/logout.html">退出登录</a></li>
-                                <li class="dropdown-footer"><a href="/admin/user/changePwd.html">修改密码</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+
+        <head th:include="@{admin/include}::left" ></head>
+
+        <div class="page-content">
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li class="active">控制面板</li>
+                </ul>
+            </div>
+
+            <div class="page-body">
+                <div style="text-align:center; line-height:1000%; font-size:24px;">
+                    <br /><p style="color:#f00;">12345678</p></div>
             </div>
         </div>
     </div>
 </div>
 
-	
-	<div class="main-container container-fluid">
-		<div class="page-container">
-            <div class="page-sidebar" id="sidebar">
-                <div class="sidebar-header-wrapper">
-                    <input class="searchinput" type="text">
-                    <i class="searchicon fa fa-search"></i>
-                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
-                </div>
-
-                <ul class="nav sidebar-menu">
-                    <!--Dashboard-->
-                    <li><a href="/admin/" target="_blank"><i class="menu-icon fa fa-film"></i><span class="menu-text">首页</span><i class="menu-expand"></i></a></li>
-                    <li><a href="/admin/main/index.html"><i class="menu-icon fa fa-gear"></i><span class="menu-text">控制面板</span><i class="menu-expand"></i></a></li>
-                    <li>
-                        <a href="#" class="menu-dropdown"><i class="menu-icon fa fa-gear"></i><span class="menu-text">文档</span><i class="menu-expand"></i></a>
-                        <ul class="submenu">
-                            <li><a href="/admin/document/index.html"><span class="menu-text">文章列表</span><i class="menu-expand"></i></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="menu-dropdown"><i class="menu-icon fa fa-gear"></i><span class="menu-text">系统</span><i class="menu-expand"></i></a>
-                        <ul class="submenu">
-                        <li><a href="/admin/user/index.html"><span class="menu-text">用户管理</span><i class="menu-expand"></i></a></li>
-                        <li><a href="/admin/auth_group/index.html"><span class="menu-text">角色管理</span><i class="menu-expand"></i></a></li>
-                        <li><a href="/admin/auth_rule/index.html"><span class="menu-text">权限列表</span><i class="menu-expand"></i></a></li>
-                        </ul>                            
-                    </li>
-                    
-                </ul>
-            </div>
-
-            <div class="page-content">
-                <div class="page-breadcrumbs">
-                    <ul class="breadcrumb">
-                        <li class="active">控制面板</li>
-                    </ul>
-                </div>
-
-                <div class="page-body">
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                <br /><p style="color:#f00;">12345678</p></div>
-                </div>
-                </div>
-            </div>
-		</div>	
-	</div>
 
 
 </body>
 <script src="/js/jquery.js"></script>
-<!--<script src="/style/jquery_002.js"></script>-->
 <script src="/style/bootstrap.js"></script>
-<!--<script src="/style/jquery.js"></script>-->
 <script src="/style/beyond.js"></script>
 </html>
