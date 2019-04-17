@@ -27,4 +27,14 @@ public class BrandService {
         return brandMapper.del(id);
     }
 
+    @Transactional
+    public Brand selectById(int id) {
+        return brandMapper.selectById(id);
+    }
+
+    @Transactional
+    public int edit(Brand brand) {
+        return brandMapper.edit(brand);
+    }
+
 }

@@ -54,7 +54,7 @@
                                             <td align="center" th:text="${list.description}"></td>
                                             <td align="center" th:switch="${list.status}"><span th:case="1">正常</span><span th:case="0">禁止</span></td>
                                             <td align="center">
-                                                <a href="/admin/user/edit/id/6.html" class="btn btn-primary btn-sm shiny"><i class="fa fa-edit"></i> 编辑</a>
+                                                <a th:href="'/admin/brand/edit/'+ ${list.id}" class="btn btn-primary btn-sm shiny"><i class="fa fa-edit"></i> 编辑</a>
                                                 <a href="#" th:onClick="'warning(\'确实要删除吗\',\'/admin/brand/del/'+ ${list.id} +'\')'" class="btn btn-danger btn-sm shiny"><i class="fa fa-trash-o"></i> 删除</a>
                                             </td>
                                         </tr>

@@ -17,4 +17,10 @@ public interface BrandMapper {
     @Delete("delete from brand where id=#{id}")
     public int del(int id);
 
+    @Select("select * from brand where id=#{id}")
+    public Brand selectById(int id);
+
+    @Update("update brand set name=#{name},logo=#{logo},url=#{url},description=#{description},status=#{status} where id=#{id}")
+    public int edit(Brand brand);
+
 }

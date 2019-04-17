@@ -96,4 +96,26 @@ public class BrandController {
         }
 
     }
+    @RequestMapping("/edit/brand/{id}")
+    public String edit(@PathVariable int id,Model model){
+        Brand brand=brandService.selectById(id);
+        model.addAttribute("brand",brand);
+        return "admin/brand/edit";
+    }
+    @RequestMapping("/del/{id}")
+    public String edit_post(@RequestParam(value = "logo") MultipartFile file,HttpServletRequest request,Model model){
+//        Brand brand=new Brand();
+//        Fileupload fileupload=new Fileupload();
+//        Jsondata jsondata=fileupload.upload(file);
+//
+//        brand.setName(request.getParameter("name"));
+//        brand.setLogo(jsondata.getMsg());
+//        brand.setDescription(request.getParameter("description"));
+//        brand.setUrl(request.getParameter("url"));
+//        brandService.add_brand(brand);
+
+        return "admin/error";
+    }
+
+
 }
