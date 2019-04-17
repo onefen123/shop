@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <head th:include="@{admin/include}::header" ></head>
+</head>
+<body>
+
+<div class="navbar">
+    <head th:include="@{admin/include}::top" ></head>
+</div>
+
+
+<div class="main-container container-fluid">
+    <div class="page-container">
+
+        <head th:include="@{admin/include}::left" ></head>
+
+        <div class="page-content">
+            <div class="page-breadcrumbs">
+                <ul class="breadcrumb">
+                    <li class="active">控制面板</li>
+                </ul>
+            </div>
+
+            <div class="page-body">
+                <div style="text-align:center; line-height:1000%; font-size:24px;">
+                    <div th:text="${error.name}"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+<script src="/js/jquery.js"></script>
+<script src="/style/bootstrap.js"></script>
+<script src="/style/beyond.js"></script>
+
+<script src="/iconfont/iconfont.js"></script>
+</html>

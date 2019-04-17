@@ -9,7 +9,7 @@ public class Jsondata implements Serializable {
     private static final long serialVersionUID=1L;
     private int code;
     private Object data;
-    private Object msg;
+    private String msg;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;

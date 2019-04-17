@@ -8,7 +8,7 @@ public class Brand {
     private String name;
     private String url;
     private String logo;
-    private String desc;
-    private String sort;
-    private String status;
+    private String description;
+    private int sort;
+    private int status;
 }

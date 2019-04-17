@@ -27,59 +27,53 @@
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
                         <div class="widget">
-                            <div class="widget-header bordered-bottom bordered-blue"><span class="widget-caption">新增用户</span></div>
+                            <div class="widget-header bordered-bottom bordered-blue">
+                                <span class="widget-caption">用户列表</span>
+                                <span onClick="javascript:window.location.href = '/admin/brand/add'" class="widget-caption" style="float: right;padding: 0px 10px;border-radius: 5px;border: 2px solid #00adee;line-height: 25px;background: #00adee33;margin-top: 2px;cursor: pointer">添加</span>
+                            </div>
                             <div class="widget-body">
-                                <div id="horizontal-form">
-
-                                    <form class="form-horizontal" role="form" action="/admin/brand/add_post" method="post" enctype="multipart/form-data">
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label no-padding-right">品牌名称</label>
-                                            <div class="col-sm-6"><input class="form-control"  name="name" required="" type="text"></div><p class="help-block col-sm-4 red">* 必填</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label no-padding-right">品牌网址</label>
-                                            <div class="col-sm-6"><input class="form-control"  name="url" required="" type="text"></div><p class="help-block col-sm-4 red">* 必填</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label no-padding-right">描述</label>
-                                            <div class="col-sm-6"><textarea class="form-control"  name="desc" type="text"></textarea>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label no-padding-right">品牌logo</label>
-                                            <div class="col-sm-6"><input name="logo" required="" type="file"></div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label no-padding-right">状态</label>
-                                            <div class="col-sm-6">
-                                                <select name="status" style="width: 35%;">
-                                                    <option selected="selected" value="1">正常</option>
-                                                    <option value="0">禁用</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-2 col-sm-10"><button type="submit" class="btn btn-default">保存信息</button></div>
-                                        </div>
-                                    </form>
-
+                                <div class="flip-scroll">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="">
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th class="text-center">品牌名称</th>
+                                            <th class="text-center">LOGO</th>
+                                            <th class="text-center">品牌描述</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center" style="width: 15%">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr th:each="list,i:${lists}">
+                                            <td align="center" th:text="${i.index+1}"></td>
+                                            <td align="center" th:text="${list.name}"></td>
+                                            <td align="center">
+                                                <a th:href="${list.url}"><img th:src="'http://127.0.0.1:1000/'+${list.logo}" height="32px"></a>
+                                            </td>
+                                            <td align="center" th:text="${list.description}"></td>
+                                            <td align="center" th:switch="${list.status}"><span th:case="1">正常</span><span th:case="0">禁止</span></td>
+                                            <td align="center">
+                                                <a href="/admin/user/edit/id/6.html" class="btn btn-primary btn-sm shiny"><i class="fa fa-edit"></i> 编辑</a>
+                                                <a href="#" th:onClick="'warning(\'确实要删除吗\',\'/admin/brand/del/'+ ${list.id} +'\')'" class="btn btn-danger btn-sm shiny"><i class="fa fa-trash-o"></i> 删除</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </div>
-
-
-
 </body>
 <script src="/js/jquery.js"></script>
 <script src="/style/bootstrap.js"></script>
 <script src="/style/beyond.js"></script>
-
 <script src="/iconfont/iconfont.js"></script>
 </html>
